@@ -1,0 +1,34 @@
+# Secrets & Environment
+.env
+.env.*
+
+# Database
+*.sql
+database/backups/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Dependencies
+vendor/
+node_modules/
+
+# Uploads & Temp
+uploads/
+sessions/
+*.tmp
+*.backup
+
+# Your project specific
+documents/
+exports/
+*.pdf
+*.xlsx
