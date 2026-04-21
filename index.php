@@ -1,6 +1,8 @@
-<?php session_start(); ?>
+<?php session_start();
 
 //session is like a temporary memory for each user 
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
