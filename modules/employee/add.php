@@ -1,4 +1,10 @@
-<?php include("../../includes/auth.php"); ?>
+
+<?php
+
+//means go back to auth and see if the user is loged in or not then further do the thing
+
+include("../../includes/auth.php"); ?>
+
 
 <!DOCTYPE html>
 <html>
