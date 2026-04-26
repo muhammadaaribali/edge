@@ -1,5 +1,5 @@
 <?php
-include("../..config/db.php");
+include("../../config/db.php");
 include("../../includes/auth.php");
 
 $result=$conn->query("SELECT * FROM Employee");
@@ -24,6 +24,7 @@ $result=$conn->query("SELECT * FROM Employee");
         <th>Name</th>
         <th>Email</th>
         <th>Phone</th>
+        <th>Actions</th>
     </tr>
 
     
@@ -36,6 +37,9 @@ $result=$conn->query("SELECT * FROM Employee");
         <td><?php echo $row['name']; ?></td>
         <td><?php echo $row['email']; ?></td>
         <td><?php echo $row['phone']; ?></td>
+        <td><a href="edit.php?id=<?php echo $row['employee_id']; ?>">Edit</a> |
+        <a href="delete.php?id=<?php echo $row['employee_id']; ?>">Delete</a>
+        </td>
     </tr>
 
     <?php } ?>
