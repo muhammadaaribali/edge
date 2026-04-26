@@ -28,9 +28,14 @@ $row=$result->fetch_assoc();
 </head>
 <body>
 
+<form action="../../actions/employee_action.php" method="POST">
+
+    <input type="hidden" name="id" value="<?php echo $row['employee_id']; ?>">
     <input type="text" name="name" value="<?php echo $row['name']; ?>"><br><br>
     <input type="email" name="email" value="<?php echo $row['email']; ?>"><br><br>
     <input type="text" name="phone" value="<?php echo $row['phone']; ?>"><br><br>
+
+    <button type="submit" name="update_employee">Update</button>
     
 </body>
 </html>
