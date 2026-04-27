@@ -4,9 +4,9 @@ include("../../config/db.php");
 $employee=$conn->query("SELECT employee_id, name from Employee");
 ?>
 
-<h2>Mark Attencance</h2>
+<h2>Mark Attendance</h2>
 
-<form action="../..actions/attendance_action.php" method="POST">
+<form action="../../actions/attendance_action.php" method="POST">
     <select name="employee_id" required>
         <option value="">Select Employee</option>
         <?php while($e=$employee->fetch_assoc()){ ?>
