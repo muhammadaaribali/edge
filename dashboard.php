@@ -19,6 +19,8 @@ include("includes/auth.php");
 <a href="modules/attendance/view.php">View Attendance</a><br><br>
 <a href="modules/salary/add.php">Add Salary</a><br><br>
 <a href="modules/salary/view.php">View Salary</a><br><br>
+<a href="modules/leave/add.php">Add Leave</a><br><br>
+<a href="modules/leave/view.php">view Leave</a><br><br>
 
 
 <a href="logout.php">Logout</a>
