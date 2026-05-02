@@ -318,3 +318,14 @@ select option {
 .action-icons {
     text-align: center;
 }
+.brand {
+    font-size: 33px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    letter-spacing: 0.5px;
+}
+
+.brand:hover {
+    opacity: 0.7;
+}

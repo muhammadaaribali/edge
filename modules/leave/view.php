@@ -21,7 +21,7 @@ $result2 = $conn->query("
 
 <br>
 
-<a href="add.php" class="btn-primary">Add Leave</a>
+<a href="add.php" class="btn-primary">+ Add Leave</a>
 
 <br><br>
 

@@ -9,7 +9,7 @@
 <body>
 
 <div class="navbar">
-    <h2>Edge</h2>
+    <a href="/edge/dashboard.php" class="brand">Edge</a>
     <div>
         <a href="/edge/logout.php" class="logout-btn-glass">Logout</a>
     </div>
