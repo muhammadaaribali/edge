@@ -1,5 +1,6 @@
 <?php
 include("../../config/db.php");
+include("../../includes/header.php");
 
 $result = $conn->query("
     SELECT e.name, s.amount, s.bonus, s.deductions,
@@ -11,6 +12,12 @@ $result = $conn->query("
 ?>
 
 <h2>Salary Records</h2>
+
+<br>
+
+<a href="add.php" class="btn-primary">+ Add Salary</a>
+
+<br><br>
 
 <table border="1">
 <tr>
@@ -34,3 +41,5 @@ $result = $conn->query("
 <?php } ?>
 
 </table>
+
+<?php include("../../includes/footer.php"); ?>

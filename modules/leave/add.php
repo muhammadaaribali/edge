@@ -1,5 +1,6 @@
 <?php
 include("../../config/db.php");
+include("../../includes/header.php");
 
 $employees = $conn->query("SELECT employee_id, name FROM Employee");
 ?>
@@ -33,3 +34,5 @@ $employees = $conn->query("SELECT employee_id, name FROM Employee");
 <button type="submit" name="add_leave">Submit</button>
 
 </form>
+
+<?php include("../../includes/footer.php"); ?>

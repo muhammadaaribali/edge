@@ -1,27 +1,27 @@
-<?php session_start();
-
-//session is like a temporary memory for each user 
-
+<?php include("config/db.php"); 
+session_start();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-<h2>Login</h2>
+<div class="center-screen">
+    <div class="glass-card">
+        <h2>Login</h2>
 
-<form action="actions/login_action.php" method="POST">
-    <input type="text" name="username" placeholder="Usernname" required><br><br>
-    <input type="password" name="password" placehoder="Password" required><br><br>
+        <form action="actions/login_action.php" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
 
-    <button type="submit">Login</button>
+            <button type="submit" name="login">Login</button>
+        </form>
+    </div>
+</div>
 
-</form>
-    
 </body>
 </html>

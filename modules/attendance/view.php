@@ -1,5 +1,6 @@
 <?php
 include("../../config/db.php");
+include("../../includes/header.php");
 
 $result = $conn->query("
     SELECT a.attendance_id, e.name, a.date, a.check_in, a.check_out, a.status
@@ -10,6 +11,11 @@ $result = $conn->query("
 
 <h2>Attendance Records</h2>
 
+<br>
+
+<a href="add.php" class="btn-primary">+ Add Attendance</a>
+
+<br><br>
 <table border="1">
 <tr>
     <th>ID</th>
@@ -32,3 +38,4 @@ $result = $conn->query("
 <?php } ?>
 
 </table>
+<?php include("../../includes/footer.php"); ?>

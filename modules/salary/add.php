@@ -1,10 +1,13 @@
 <?php
 include("../../config/db.php");
+include("../../includes/header.php");
 
 $employees=$conn->query("SELECT employee_id, name from Employee");
 ?>
 
 <h2>Add salary</h2>
+
+<br>
 
 <form action="../../actions/salary_action.php" method="POST">
     <select name="employee_id" required>
@@ -23,3 +26,5 @@ $employees=$conn->query("SELECT employee_id, name from Employee");
 
     <button type="submit" name="add_salary">Add Salary</button>
 </form>
+
+<?php include("../../includes/footer.php"); ?>

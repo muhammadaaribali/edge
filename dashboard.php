@@ -1,29 +1,42 @@
 <?php
 include("includes/auth.php");
-
+include("includes/header.php");
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   
-    <title>Dashboard</title>
-</head>
-<body>
+<div class="container">
 
-<H2>Welcome <?php echo $_SESSION['username']?></H2>
+<div class="card">
+    <h2>Welcome, <?php echo $_SESSION['username']; ?></h2>
+</div>
 
-<a href="modules/employee/add.php">Add Employee</a><br><br>
-<a href="modules/employee/view.php">View Employees</a><br><br>
-<a href="modules/attendance/add.php">Mark Attendance</a><br><br>
-<a href="modules/attendance/view.php">View Attendance</a><br><br>
-<a href="modules/salary/add.php">Add Salary</a><br><br>
-<a href="modules/salary/view.php">View Salary</a><br><br>
-<a href="modules/leave/add.php">Add Leave</a><br><br>
-<a href="modules/leave/view.php">view Leave</a><br><br>
+<div class="dashboard-grid">
 
+    <a class="dash-card" href="modules/employee/view.php">
+        <i class="bi bi-people-fill icon"></i>
+        <h3>Employees</h3>
+        <p>Manage employees</p>
+    </a>
 
-<a href="logout.php">Logout</a>
-    
-</body>
-</html>
+    <a class="dash-card" href="modules/attendance/view.php">
+        <i class="bi bi-calendar-check icon"></i>
+        <h3>Attendance</h3>
+        <p>Track attendance</p>
+    </a>
+
+    <a class="dash-card" href="modules/salary/view.php">
+        <i class="bi bi-cash-stack icon"></i>
+        <h3>Salary</h3>
+        <p>Manage salaries</p>
+    </a>
+
+    <a class="dash-card" href="modules/leave/view.php">
+        <i class="bi bi-journal-text icon"></i>
+        <h3>Leave</h3>
+        <p>Leave records</p>
+    </a>
+
+</div>
+
+</div>
+
+<?php include("includes/footer.php"); ?>

@@ -1,5 +1,6 @@
 <?php
 include("../../config/db.php");
+include("../../includes/header.php");
 
 $result = $conn->query("
     SELECT e.name, l.start_date, l.end_date, l.leave_type, l.status
@@ -17,6 +18,12 @@ $result2 = $conn->query("
 ?>
 
 <h2>Leave Records</h2>
+
+<br>
+
+<a href="add.php" class="btn-primary">Add Leave</a>
+
+<br><br>
 
 <table border="1">
 <tr>
@@ -39,10 +46,15 @@ $result2 = $conn->query("
 
 </table>
 
-<h4>Employees with NO Leave</h4>
+<br><br>
+
+<h3>Employees with NO Leave</h3>
+<br>
 
 <ul>
 <?php while($row = $result2->fetch_assoc()) { ?>
     <li><?php echo $row['name']; ?></li>
 <?php } ?>
 </ul>
+
+<?php include("../../includes/footer.php"); ?>

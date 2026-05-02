@@ -1,6 +1,7 @@
 <?php
 
 include("../../config/db.php");
+include("../../includes/header.php");
 
 if(isset($_GET['id'])){
     $id=$_GET['id'];
@@ -13,3 +14,5 @@ if(isset($_GET['id'])){
         echo "Error: " . $conn->error;
     }
 }
+
+include("../../includes/footer.php"); ?>

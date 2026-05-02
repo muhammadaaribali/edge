@@ -1,6 +1,7 @@
 <?php
 
 include("../../config/db.php");
+include("../../includes/header.php");
 $id=$_GET['id'];
 
 
@@ -75,3 +76,5 @@ $row=$result->fetch_assoc();
     
 </body>
 </html>
+
+<?php include("../../includes/footer.php"); ?>

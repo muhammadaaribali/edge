@@ -5,6 +5,7 @@
 
 include("../../includes/auth.php");
 include("../../config/db.php");
+include("../../includes/header.php");
 
 $departments=$conn->query("SELECT * FROM Department");
 $roles=$conn->query("SELECT * FROM Role");
@@ -20,6 +21,8 @@ $roles=$conn->query("SELECT * FROM Role");
 <body>
 
 <h2>Add Employee</h2>
+
+<br>
 
 <form action="../../actions/employee_action.php" method="POST">
 
@@ -64,3 +67,5 @@ $roles=$conn->query("SELECT * FROM Role");
 
 </body>
 </html>
+
+<?php include("../../includes/footer.php"); ?>
